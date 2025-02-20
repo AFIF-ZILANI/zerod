@@ -1,7 +1,20 @@
-import AFIFIMAGE from '@/images/hero.jpg'
-import BandorniImage from "@/images/BANDORNI.jpg"
-import TauhidImage from "@/images/Tauhid.jpg"
-export const foundersData = [
+import AFIFIMAGE from "@/images/hero.jpg";
+import BandorniImage from "@/images/BANDORNI.jpg";
+import TauhidImage from "@/images/Tauhid.jpg";
+import { StaticImageData } from "next/image";
+
+interface FounderCardProps {
+  name: string;
+  role: string;
+  bio: string;
+  image: StaticImageData;
+  social: {
+    linkedin?: string;
+    github?: string;
+    twitter?: string;
+  };
+}
+export const foundersData: FounderCardProps[] = [
   {
     name: "Tauhid Rana",
     role: "Chief Technology Officer",
@@ -11,8 +24,8 @@ export const foundersData = [
     social: {
       linkedin: "https://linkedin.com",
       github: "https://github.com",
-      twitter: "https://twitter.com"
-    }
+      twitter: "https://twitter.com",
+    },
   },
   {
     name: "Ajmery Arabi",
@@ -23,8 +36,8 @@ export const foundersData = [
     social: {
       linkedin: "https://linkedin.com",
       github: "https://github.com",
-      twitter: "https://twitter.com"
-    }
+      twitter: "https://twitter.com",
+    },
   },
   {
     name: "AFIF ZILANI",
@@ -35,7 +48,7 @@ export const foundersData = [
     social: {
       linkedin: "https://linkedin.com",
       github: "https://github.com/AFIF-ZILANI",
-      twitter: "https://x.com/afif_zilani"
-    }
-  }
+      twitter: "https://x.com/afif_zilani",
+    },
+  },
 ] as const;
